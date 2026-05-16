@@ -10,7 +10,7 @@ from pypdf import PdfReader
 st.set_page_config(page_title="Company Handbook Assistant", page_icon="📋")
 
 try:
-    genai.configure(api_key="AIzaSyDbYoY7bBsaQWX5e2a8lwg5GFIPuEx-VVw")
+    genai.configure(api_key=st.secrets["AIzaSyDbYoY7bBsaQWX5e2a8lwg5GFIPuEx-VVw"])
     st.sidebar.success("✅ Gemini API Connected")
 except Exception as e:
     st.error(f"Failed to configure Gemini API. Did you add it to secrets? Error: {e}")
